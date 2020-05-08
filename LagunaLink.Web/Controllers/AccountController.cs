@@ -70,10 +70,9 @@ namespace LagunaLink.Web.Controllers
                 {
                     user = new User
                     {
-                        FirstName = model.FirstName,
-                        LastName = model.LastName,
                         Email = model.Username,
-                        UserName = model.Username
+                        UserName = model.Username,
+                        Registered = false
                     };
 
                     var result = await this.userHelper.AddUserAsync(user, model.Password);
@@ -103,48 +102,6 @@ namespace LagunaLink.Web.Controllers
                 }
 
                 this.ModelState.AddModelError(string.Empty, "The username is already registered.");
-            }
-
-            return this.View(model);
-        }
-
-        public async Task<IActionResult> ChangeUser()
-        {
-            var user = await this.userHelper.GetUserByEmailAsync(this.User.Identity.Name);
-            var model = new ChangeUserViewModel();
-            if (user != null)
-            {
-                model.FirstName = user.FirstName;
-                model.LastName = user.LastName;
-            }
-
-            return this.View(model);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> ChangeUser(ChangeUserViewModel model)
-        {
-            if (this.ModelState.IsValid)
-            {
-                var user = await this.userHelper.GetUserByEmailAsync(this.User.Identity.Name);
-                if (user != null)
-                {
-                    user.FirstName = model.FirstName;
-                    user.LastName = model.LastName;
-                    var respose = await this.userHelper.UpdateUserAsync(user);
-                    if (respose.Succeeded)
-                    {
-                        this.ViewBag.UserMessage = "User updated!";
-                    }
-                    else
-                    {
-                        this.ModelState.AddModelError(string.Empty, respose.Errors.FirstOrDefault().Description);
-                    }
-                }
-                else
-                {
-                    this.ModelState.AddModelError(string.Empty, "User no found.");
-                }
             }
 
             return this.View(model);

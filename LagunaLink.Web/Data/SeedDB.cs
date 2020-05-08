@@ -33,10 +33,10 @@
             {
                 user = new User
                 {
-                    FirstName = "Jose",
-                    LastName = "Vega",
                     Email = "josevega234@gmail.com",
-                    UserName = "josevega234@gmail.com"
+                    UserName = "josevega234@gmail.com",
+                    LagunaRole = 1,
+                    Registered = false
                 };
 
                 var result = await this.userHelper.AddUserAsync(user, "123456");

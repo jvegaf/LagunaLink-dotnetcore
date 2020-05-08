@@ -5,15 +5,8 @@
     public class RegisterNewUserViewModel
     {
         [Required]
-        [Display(Name = "First Name")]
-        public string FirstName { get; set; }
-
-        [Required]
-        [Display(Name = "Last Name")]
-        public string LastName { get; set; }
-
-        [Required]
         [DataType(DataType.EmailAddress)]
+        [Display(Name ="Correo Electronico")]
         public string Username { get; set; }
 
         [Required]
@@ -23,5 +16,7 @@
         [Compare("Password")]
         public string Confirm { get; set; }
 
+        [Required]
+        public int LagunaRole { get; set; }
     }
 }

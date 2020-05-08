@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LagunaLink.Web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200508145301_Users")]
+    [Migration("20200508193024_Users")]
     partial class Users
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,9 +36,7 @@ namespace LagunaLink.Web.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
-                    b.Property<string>("FirstName");
-
-                    b.Property<string>("LastName");
+                    b.Property<int>("LagunaRole");
 
                     b.Property<bool>("LockoutEnabled");
 
@@ -55,6 +53,8 @@ namespace LagunaLink.Web.Migrations
                     b.Property<string>("PhoneNumber");
 
                     b.Property<bool>("PhoneNumberConfirmed");
+
+                    b.Property<bool>("Registered");
 
                     b.Property<string>("SecurityStamp");
 

@@ -34,9 +34,7 @@ namespace LagunaLink.Web.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
-                    b.Property<string>("FirstName");
-
-                    b.Property<string>("LastName");
+                    b.Property<int>("LagunaRole");
 
                     b.Property<bool>("LockoutEnabled");
 
@@ -53,6 +51,8 @@ namespace LagunaLink.Web.Migrations
                     b.Property<string>("PhoneNumber");
 
                     b.Property<bool>("PhoneNumberConfirmed");
+
+                    b.Property<bool>("Registered");
 
                     b.Property<string>("SecurityStamp");
 

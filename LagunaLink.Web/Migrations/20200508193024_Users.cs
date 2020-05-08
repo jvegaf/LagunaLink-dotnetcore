@@ -41,8 +41,8 @@ namespace LagunaLink.Web.Migrations
                     LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
                     LockoutEnabled = table.Column<bool>(nullable: false),
                     AccessFailedCount = table.Column<int>(nullable: false),
-                    FirstName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: true)
+                    Registered = table.Column<bool>(nullable: false),
+                    LagunaRole = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

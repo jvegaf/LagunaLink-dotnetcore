@@ -1,14 +1,15 @@
-﻿
-
-using Microsoft.AspNetCore.Identity;
-
-namespace LagunaLink.Web.Data.Entities
+﻿namespace LagunaLink.Web.Data.Entities
 {
+    using Microsoft.AspNetCore.Identity;
+    using System.ComponentModel.DataAnnotations;
+
     public class User : IdentityUser
     {
-        public string FirstName { get; set; }
-
-        public string LastName { get; set; }
-
+        [Required]
+        public bool Registered { get; set; }
+        
+        [Required]
+        [Display(Name ="Laguna Role")]
+        public int LagunaRole { get; set; }
     }
 }
