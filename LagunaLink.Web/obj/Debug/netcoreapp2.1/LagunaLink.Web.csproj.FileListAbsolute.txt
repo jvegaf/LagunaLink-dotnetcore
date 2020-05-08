@@ -35,3 +35,4 @@ C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\La
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.csproj.CopyComplete
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.csproj.CoreCompileInputs.cache
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.cshtml.g.cs

@@ -6,6 +6,8 @@ namespace LagunaLink.Web.Controllers
     using LagunaLink.Web.Helpers;
     using LagunaLink.Web.Models;
     using System.Linq;
+    using LagunaLink.Web.Data.Entities;
+    using Microsoft.AspNetCore.Identity;
 
     public class AccountController : Controller
     {
@@ -53,6 +55,58 @@ namespace LagunaLink.Web.Controllers
             return this.RedirectToAction("Index", "Home");
         }
 
+        public IActionResult Register()
+        {
+            return this.View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Register(RegisterNewUserViewModel model)
+        {
+            if (this.ModelState.IsValid)
+            {
+                var user = await this.userHelper.GetUserByEmailAsync(model.Username);
+                if (user == null)
+                {
+                    user = new User
+                    {
+                        FirstName = model.FirstName,
+                        LastName = model.LastName,
+                        Email = model.Username,
+                        UserName = model.Username
+                    };
+
+                    var result = await this.userHelper.AddUserAsync(user, model.Password);
+                    if (result != IdentityResult.Success)
+                    {
+                        this.ModelState.AddModelError(string.Empty, "The user couldn't be created.");
+                        return this.View(model);
+                    }
+
+
+                    var loginViewModel = new LoginViewModel
+                    {
+                        Password = model.Password,
+                        RememberMe = false,
+                        Username = model.Username
+                    };
+
+                    var result2 = await this.userHelper.LoginAsync(loginViewModel);
+
+                    if (result2.Succeeded)
+                    {
+                        return this.RedirectToAction("Index", "Home");
+                    }
+
+                    this.ModelState.AddModelError(string.Empty, "The user couldn't be login.");
+                    return this.View(model);
+                }
+
+                this.ModelState.AddModelError(string.Empty, "The username is already registered.");
+            }
+
+            return this.View(model);
+        }
 
     }
 }
