@@ -9,7 +9,6 @@ C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\bin\Debug\netcoreapp2.1\La
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\bin\Debug\netcoreapp2.1\LagunaLink.Web.Views.dll
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\bin\Debug\netcoreapp2.1\LagunaLink.Web.Views.pdb
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.csprojAssemblyReference.cache
-C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.csproj.CoreCompileInputs.cache
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.RazorAssemblyInfo.cache
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.RazorAssemblyInfo.cs
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.AssemblyInfoInputs.cache
@@ -34,3 +33,5 @@ C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\La
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.pdb
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.genruntimeconfig.cache
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.csproj.CopyComplete
+C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.csproj.CoreCompileInputs.cache
+C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
