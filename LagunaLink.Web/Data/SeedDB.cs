@@ -33,8 +33,8 @@
             {
                 user = new User
                 {
-                    Email = "josevega234@gmail.com",
-                    UserName = "josevega234@gmail.com",
+                    Email = "josevega234@me.com",
+                    UserName = "josevega234@me.com",
                     LagunaRole = 1,
                     Registered = false
                 };
@@ -54,7 +54,9 @@
                 await this.userHelper.AddUserToRoleAsync(user, "Admin");
             }
 
+            var token = await this.userHelper.GenerateEmailConfirmationTokenAsync(user);
+            await this.userHelper.ConfirmEmailAsync(user, token);
         }
-    
+
     }
 }

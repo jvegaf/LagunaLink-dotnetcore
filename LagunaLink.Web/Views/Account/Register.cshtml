@@ -13,9 +13,9 @@
             <div class="form-group">
                 <label for="description">Elige tu tipo de cuenta</label>
                 <label for="StudentRole">Estudiante</label>
-                <input asp-for="LagunaRole" type="radio" value="1" id="StudentRole" class="form-control" checked/>                
+                <input asp-for="LagunaRole" type="radio" value="1" id="StudentRole" class="form-control" checked />
                 <label for="CompanyRole">Empresa</label>
-                <input asp-for="LagunaRole" type="radio" value="2" id="CompanyRole" class="form-control"/>
+                <input asp-for="LagunaRole" type="radio" value="2" id="CompanyRole" class="form-control" />
                 <span asp-validation-for="LagunaRole" class="text-warning"></span>
             </div>
 
@@ -43,6 +43,12 @@
         </form>
     </div>
 </div>
+<div class="text-success">
+    <p>
+        @ViewBag.Message
+    </p>
+</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

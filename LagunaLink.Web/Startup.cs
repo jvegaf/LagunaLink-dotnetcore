@@ -28,6 +28,7 @@
             services.AddIdentity<User, IdentityRole>(cfg =>
             {
                 cfg.User.RequireUniqueEmail = true;
+                cfg.SignIn.RequireConfirmedEmail = true;
                 cfg.Password.RequireDigit = false;
                 cfg.Password.RequiredUniqueChars = 0;
                 cfg.Password.RequireLowercase = false;
@@ -35,6 +36,7 @@
                 cfg.Password.RequireUppercase = false;
                 cfg.Password.RequiredLength = 6;
             })
+            .AddDefaultTokenProviders()
             .AddEntityFrameworkStores<DataContext>();
 
             services.Configure<CookiePolicyOptions>(options =>
@@ -51,6 +53,7 @@
 
             services.AddTransient<SeedDB>();
             services.AddScoped<IUserHelper, UserHelper>();
+            services.AddScoped<IMailHelper, MailHelper>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
