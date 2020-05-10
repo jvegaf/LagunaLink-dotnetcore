@@ -7,7 +7,7 @@
     
     public class UserHelper : IUserHelper
     {
-        private readonly UserManager<User> userManager;
+        private readonly  UserManager<User> userManager;
         private readonly SignInManager<User> signInManager;
         private readonly RoleManager<IdentityRole> roleManager;
 

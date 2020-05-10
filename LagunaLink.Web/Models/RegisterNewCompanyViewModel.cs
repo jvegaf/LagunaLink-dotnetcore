@@ -1,15 +1,12 @@
-﻿namespace LagunaLink.Web.Data.Entities
+﻿namespace LagunaLink.Web.Models
 {
     using System.ComponentModel.DataAnnotations;
-    
-    public class Company : IEntity
+
+    public class RegisterNewCompanyViewModel
     {
         public int Id { get; set; }
 
         [Required]
-        public string UserId { get; set; }
-
         public string Name { get; set; }
-        //TODO: City prop
     }
 }

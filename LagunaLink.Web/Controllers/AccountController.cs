@@ -8,16 +8,21 @@ namespace LagunaLink.Web.Controllers
     using System.Linq;
     using LagunaLink.Web.Data.Entities;
     using Microsoft.AspNetCore.Identity;
+    using LagunaLink.Web.Data.Managers;
+    using System;
+    using Microsoft.AspNetCore.Http;
 
     public class AccountController : Controller
     {
         private readonly IUserHelper userHelper;
         private readonly IMailHelper mailHelper;
+        private readonly IStudentManager studentManager;
 
-        public AccountController(IUserHelper userHelper, IMailHelper mailHelper)
+        public AccountController(IUserHelper userHelper, IMailHelper mailHelper, IStudentManager studentManager)
         {
             this.userHelper = userHelper;
             this.mailHelper = mailHelper;
+            this.studentManager = studentManager;
         }
 
         public IActionResult Login()
@@ -74,7 +79,8 @@ namespace LagunaLink.Web.Controllers
                     {
                         Email = model.Username,
                         UserName = model.Username,
-                        Registered = false
+                        Registered = false,
+                        LagunaRole = model.LagunaRole
                     };
 
                     var result = await this.userHelper.AddUserAsync(user, model.Password);
@@ -102,6 +108,57 @@ namespace LagunaLink.Web.Controllers
             }
 
             return this.View(model);
+        }
+
+        public IActionResult RegisterStudent()
+        {
+            return this.View();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> RegisterStudent(RegisterNewStudentViewModel model)
+        {
+            if (this.ModelState.IsValid)
+            {
+                string userId = HttpContext.Session.GetString("userId");
+
+                var student = this.studentManager.GetStudentByUserId(userId);
+                if (student == null)
+                {
+
+                    student = new Student
+                    {
+                        UserId = userId,
+                        Name = model.Name,
+                        FirstSurname = model.FirstSurname,
+                        LastSurname = model.LastSurname,
+                        Phone = model.Phone
+                    };
+
+                    this.studentManager.AddStudent(student);
+                    var result = await this.studentManager.SaveAllAsync();
+                    
+                    if (result != true)
+                    {
+                        this.ModelState.AddModelError(string.Empty, "The user couldn't be created.");
+                        return this.View(model);
+                    }
+
+                    var user = await this.userHelper.GetUserByIdAsync(userId);
+                    user.Registered = true;
+                    var _result = await this.userHelper.UpdateUserAsync(user);
+                    
+                    return RedirectToAction("Login", "Account");
+                }
+
+                this.ModelState.AddModelError(string.Empty, "The student is already registered.");
+            }
+            return this.View(model);
+        }
+
+        public IActionResult RegisterCompany(string userId)
+        {
+            return this.View();
         }
 
         public IActionResult ChangePassword()
@@ -155,7 +212,11 @@ namespace LagunaLink.Web.Controllers
                 return this.NotFound();
             }
 
-            return View();
+            HttpContext.Session.SetString("userId", user.Id);
+
+            if (user.LagunaRole == 1) return RedirectToAction("RegisterStudent", "Account");
+
+            return RedirectToAction("RegisterCompany", "Account");
         }
 
         public IActionResult RecoverPassword()

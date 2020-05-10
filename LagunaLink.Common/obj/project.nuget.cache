@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RS1m6bdo0Zt9h3ZQdiSh27aPE+3HBtdEOO1R7E4LSAkdzExNuxvMts7kytmcH4YDeWeiseRwA94UaCjE7Von1g==",
+  "dgSpecHash": "CwiUAXN2YWfE3l/uLdHJJAK5sHYGLJsghRMOtaGroGycRQmIQINqdUCyc0iYuyud2YeoV+pnEfiiTEqVQ4+t5Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\josev\\source\\repos\\LagunaLink\\LagunaLink.Common\\LagunaLink.Common.csproj",
+  "projectFilePath": "C:\\Users\\josev\\Source\\Repos\\LagunaLink\\LagunaLink.Common\\LagunaLink.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\josev\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\josev\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

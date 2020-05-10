@@ -1,7 +1,7 @@
 ﻿namespace LagunaLink.Web.Models
 {
     using System.ComponentModel.DataAnnotations;
-    
+
     public class RegisterNewUserViewModel
     {
         [Required]

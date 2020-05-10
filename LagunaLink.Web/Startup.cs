@@ -2,6 +2,7 @@
 {
     using LagunaLink.Web.Data;
     using LagunaLink.Web.Data.Entities;
+    using LagunaLink.Web.Data.Managers;
     using LagunaLink.Web.Helpers;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
@@ -11,7 +12,8 @@
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
-    
+    using System;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -24,6 +26,14 @@
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromDays(1);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
 
             services.AddIdentity<User, IdentityRole>(cfg =>
             {
@@ -54,6 +64,7 @@
             services.AddTransient<SeedDB>();
             services.AddScoped<IUserHelper, UserHelper>();
             services.AddScoped<IMailHelper, MailHelper>();
+            services.AddScoped<IStudentManager, StudentManager>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -71,6 +82,7 @@
             }
 
             app.UseHttpsRedirection();
+            app.UseSession();
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseCookiePolicy();

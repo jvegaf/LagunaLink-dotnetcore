@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\josev\\source\\repos\\LagunaLink\\LagunaLink.Web\\LagunaLink.Web.csproj": {}
+    "C:\\Users\\josev\\Source\\Repos\\LagunaLink\\LagunaLink.Web\\LagunaLink.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\josev\\source\\repos\\LagunaLink\\LagunaLink.Web\\LagunaLink.Web.csproj": {
+    "C:\\Users\\josev\\Source\\Repos\\LagunaLink\\LagunaLink.Web\\LagunaLink.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\josev\\source\\repos\\LagunaLink\\LagunaLink.Web\\LagunaLink.Web.csproj",
+        "projectUniqueName": "C:\\Users\\josev\\Source\\Repos\\LagunaLink\\LagunaLink.Web\\LagunaLink.Web.csproj",
         "projectName": "LagunaLink.Web",
-        "projectPath": "C:\\Users\\josev\\source\\repos\\LagunaLink\\LagunaLink.Web\\LagunaLink.Web.csproj",
+        "projectPath": "C:\\Users\\josev\\Source\\Repos\\LagunaLink\\LagunaLink.Web\\LagunaLink.Web.csproj",
         "packagesPath": "C:\\Users\\josev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\josev\\source\\repos\\LagunaLink\\LagunaLink.Web\\obj\\",
+        "outputPath": "C:\\Users\\josev\\Source\\Repos\\LagunaLink\\LagunaLink.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\josev\\AppData\\Roaming\\NuGet\\NuGet.Config",

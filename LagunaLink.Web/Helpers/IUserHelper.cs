@@ -33,6 +33,7 @@
 
         Task<IdentityResult> ResetPasswordAsync(User user, string token, string password);
 
+        Task<IdentityResult> UpdateUserAsync(User user);
 
     }
 }

@@ -1,5 +1,4 @@
-﻿
-namespace LagunaLink.Web.Helpers
+﻿namespace LagunaLink.Web.Helpers
 {
     using MailKit.Net.Smtp;
     using Microsoft.Extensions.Configuration;
@@ -19,7 +18,7 @@ namespace LagunaLink.Web.Helpers
             }
             catch (System.Exception ex)
             {
-                
+                System.Console.WriteLine(ex.Message);
             }
         }
 

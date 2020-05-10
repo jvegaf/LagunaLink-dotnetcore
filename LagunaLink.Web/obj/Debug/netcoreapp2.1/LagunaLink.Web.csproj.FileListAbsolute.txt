@@ -9,6 +9,7 @@ C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\bin\Debug\netcoreapp2.1\La
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\bin\Debug\netcoreapp2.1\LagunaLink.Web.Views.dll
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\bin\Debug\netcoreapp2.1\LagunaLink.Web.Views.pdb
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.csprojAssemblyReference.cache
+C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.csproj.CoreCompileInputs.cache
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.RazorAssemblyInfo.cache
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.RazorAssemblyInfo.cs
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.AssemblyInfoInputs.cache
@@ -16,6 +17,12 @@ C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\La
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.TagHelpers.input.cache
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.TagHelpers.output.cache
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.RazorCoreGenerate.cache
+C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\ChangePassword.cshtml.g.cs
+C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\ConfirmEmail.cshtml.g.cs
+C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\RecoverPassword.cshtml.g.cs
+C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
@@ -33,10 +40,5 @@ C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\La
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.pdb
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.genruntimeconfig.cache
 C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.csproj.CopyComplete
-C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
-C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.cshtml.g.cs
-C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\ChangePassword.cshtml.g.cs
-C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\LagunaLink.Web.csproj.CoreCompileInputs.cache
-C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\ConfirmEmail.cshtml.g.cs
-C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\RecoverPassword.cshtml.g.cs
-C:\Users\josev\source\repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
+C:\Users\josev\Source\Repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\RegisterCompany.cshtml.g.cs
+C:\Users\josev\Source\Repos\LagunaLink\LagunaLink.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\RegisterStudent.cshtml.g.cs

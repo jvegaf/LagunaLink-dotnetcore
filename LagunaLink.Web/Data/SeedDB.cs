@@ -28,7 +28,7 @@
             await this.userHelper.CheckRoleAsync("Company");
             await this.userHelper.CheckRoleAsync("Admin");
 
-            var user = await this.userHelper.GetUserByEmailAsync("josevega234@gmail.com");
+            var user = await this.userHelper.GetUserByEmailAsync("josevega234@me.com");
             if (user == null)
             {
                 user = new User
