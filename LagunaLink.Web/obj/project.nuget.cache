@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c/qnQtmXHab4ofUu/W5G+uyyJ0ymwoRKbEvl840a/yKiO4ds1gthAwfxejLZxrnQGv6GYjpQJZGjxTWcGKKUsg==",
+  "dgSpecHash": "c7jZW4KE3eVaRudr9wETOLNvIHrmjwj1TiEqFyObPMATmQ7rZBMyJ7w19tQC9wjLvu04Fqzf/WUq7dPKmzZpYA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\josev\\Source\\Repos\\LagunaLink\\LagunaLink.Web\\LagunaLink.Web.csproj",
+  "projectFilePath": "C:\\Users\\josev\\source\\repos\\LagunaLink\\LagunaLink.Web\\LagunaLink.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\josev\\.nuget\\packages\\mailkit\\2.6.0\\mailkit.2.6.0.nupkg.sha512",
     "C:\\Users\\josev\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",

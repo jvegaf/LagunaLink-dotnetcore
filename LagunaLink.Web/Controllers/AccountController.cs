@@ -156,10 +156,16 @@ namespace LagunaLink.Web.Controllers
             return this.View(model);
         }
 
-        public IActionResult RegisterCompany(string userId)
+        public IActionResult RegisterCompany()
         {
             return this.View();
         }
+
+        //[HttpPost]
+        //public IActionResult RegisterCompany()
+        //{
+        //    string userId = HttpContext.Session.getSt
+        //}
 
         public IActionResult ChangePassword()
         {
