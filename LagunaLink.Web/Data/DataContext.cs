@@ -1,11 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using LagunaLink.Web.Models;
-namespace LagunaLink.Web.Data
+﻿namespace LagunaLink.Web.Data
 {
     using LagunaLink.Web.Data.Entities;
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
-    
+
     public class DataContext : IdentityDbContext<User>
     {
 
@@ -17,6 +15,11 @@ namespace LagunaLink.Web.Data
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
 
+        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite("Filename=lagunalink.db");
+            base.OnConfiguring(optionsBuilder);
         }
 
         public DbSet<LagunaLink.Web.Models.RegisterNewStudentViewModel> RegisterNewStudentViewModel { get; set; }

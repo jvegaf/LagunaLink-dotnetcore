@@ -56,11 +56,6 @@
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<DataContext>(cfg =>
-            {
-                cfg.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-            });
-
             services.AddTransient<SeedDB>();
             services.AddScoped<IUserHelper, UserHelper>();
             services.AddScoped<IMailHelper, MailHelper>();
